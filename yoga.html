@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yoga - the movement medicine</title>
+  </head>
+  <style>
+    body {
+      background: linear-gradient(70deg, #f34081 10%, #f1aea1 100%);
+      text-align: center;
+      color: #121212;
+    }
+
+    button {
+      display: block;
+      margin: 20px auto;
+      padding: 10px;
+      border-radius: 20px;
+      transition: all 150ms ease-in-out;
+    }
+    .theme-button {
+      background-color: #121212;
+      color: white;
+      border: solid 1px white;
+      font-size: 12px;
+    }
+    .theme-button:hover {
+      color: #121212;
+      background-color: white;
+    }
+    .container {
+      background-color: white;
+      max-width: 600px;
+      padding: 50px;
+      border-radius: 20px;
+      display: block;
+      margin: 20px auto;
+    }
+    h1 {
+      text-align: center;
+      font-size: 100px;
+      font-family: "Josefin Sans", sans-serif;
+      text-transform: uppercase;
+      margin: 20px 10px 10px 10px;
+    }
+    h2 {
+      text-align: center;
+      font-size: 20px;
+      font-family: "Josefin Sans", sans-serif;
+      text-transform: uppercase;
+    }
+    img {
+      max-width: 100%;
+    }
+    p {
+      line-height: 1.2;
+    }
+    footer {
+      text-align: center;
+      margin: 20px;
+      color: white;
+      font-size: 12px;
+    }
+    .yoga-intro-picture {
+      transition: all 150ms ease-in-out;
+      padding: 20px;
+    }
+    .yoga-intro-picture:hover {
+      filter: contrast(80%);
+      transform: scale(1.1);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 15px;
+    }
+    .grid img {
+      width: 100%;
+      border-radius: 100px;
+      object-fit: cover;
+      transition: all 150ms ease-in-out;
+    }
+    .grid img:hover {
+      transform: scale(2);
+    }
+    .dark {
+      background: linear-gradient(170deg, black 10%, #121212 100%);
+      color: white;
+    }
+    .dark .container {
+      background: rgba(255, 255, 255, 0.1);
+    }
+    .dark a {
+      color: #f1aea1;
+    }
+  </style>
+  <body>
+    <button class="theme-button">Dark Theme</button>
+    <div class="container">
+      <h1>Yoga</h1>
+      <h2>movement medicine</h2>
+      <a href="https://theunderbelly.com" target="_blank">
+        <img
+          class="yoga-intro-picture"
+          src="https://theunderbelly.com/wp-content/uploads/JessPose-03-solo.png"
+        />
+      </a>
+      <div class="grid">
+        <img
+          src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/yoga-for-beginners-main-1582136732.jpg?crop=0.673xw:1.00xh;0.164xw,0&resize=640:*"
+          alt=""
+        />
+        <img
+          src="https://movementformodernlife.com/blog/wp-content/uploads/2018/10/jonelle-1.jpg"
+          alt=""
+        />
+        <img
+          src="https://images.squarespace-cdn.com/content/v1/58f0e5df6a4963e4297f39b7/1671650365026-KFFKVPCXDMJCSGS5J0J7/Alive+in+the+Fire_Yoga_Jessica+Bartlett+%289%29crop.jpg?format=500w"
+          alt=""
+        />
+      </div>
+      <p>
+        Yoga is a group of physical, mental, and spiritual practices or
+        disciplines which originated in ancient India and aim to control (yoke)
+        and still the mind, recognizing a detached witness-consciousness
+        untouched by the mind (Chitta) and mundane suffering (Duḥkha). There is
+        a wide variety of schools of yoga, practices, and goals in Hinduism,
+        Buddhism, and Jainism, and traditional and modern yoga is practiced
+        worldwide.
+      </p>
+      <a href="https://theunderbelly.com/classes/" target="_blank"
+        >join a class with the Underbelly Yoga</a
+      >
+    </div>
+    <footer>Coded by Kat Soltysiak</footer>
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+        //body.classList.toggle("dark");
+        if (body.classList.contains("dark")) {
+          body.classList.remove("dark");
+        } else {
+          body.classList.add("dark");
+        }
+      }
+
+      let themeButton = document.querySelector(".theme-button");
+      themeButton.addEventListener("click", changeTheme);
+    </script>
+  </body>
+</html>
